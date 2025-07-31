@@ -1,142 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+i<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Administrator</title>
-  <style>
-    body {
-      background-color: #e9ecef;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .contact-container {
-      max-width: 450px;
-      margin: 50px auto;
-      padding: 25px 30px;
-      background: #f9f9f9;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    .contact-container h2 {
-      text-align: center;
-      color: #222;
-      margin-bottom: 10px;
-    }
-    .contact-container p.description {
-      text-align: center;
-      color: #555;
-      margin-bottom: 25px;
-      font-size: 16px;
-    }
-    .contact-info {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 16px;
-      color: #444;
-    }
-    .contact-info a {
-      color: #007BFF;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-    form label {
-      display: block;
-      margin-bottom: 7px;
-      font-weight: 600;
-      color: #444;
-      font-size: 14px;
-    }
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%;
-      padding: 11px 14px;
-      margin-bottom: 18px;
-      border: 1.5px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-      box-sizing: border-box;
-      transition: border-color 0.3s ease;
-      resize: vertical;
-    }
-    form input[type="text"]:focus,
-    form input[type="email"]:focus,
-    form textarea:focus {
-      border-color: #007BFF;
-      outline: none;
-    }
-    form button {
-      width: 100%;
-      background-color: #007BFF;
-      color: #fff;
-      padding: 13px 0;
-      font-size: 16px;
-      font-weight: 700;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    form button:hover {
-      background-color: #0056b3;
-    }
-    .thank-you-message {
-      display: none;
-      text-align: center;
-      margin-top: 20px;
-      font-size: 16px;
-      color: green;
-      font-weight: 600;
-    }
-  </style>
+  <title>Contact Admin</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="contact-container">
-    <h2>Contact Administrator</h2>
-    <p class="description">Feel free to reach out for price updates or product info.</p>
+  <h1>Contact the Admin</h1>
+  <p>If you want to update your prices, products, or schedule, please contact me directly:</p>
 
-    <div class="contact-info">
-      <p>📧 Email: <a href="mailto:ikb0r1s0@gmail.com">ikb0r1s0@gmail.com</a></p>
-      <p>📞 Phone: <a href="tel:+250788368395">0788 368 395</a></p>
-    </div>
+  <p><strong>Email:</strong> <a href="mailto:ikb0r1s0@gmail.com">ikb0r1s0@gmail.com</a></p>
+  <p><strong>Phone:</strong> <a href="tel:+250788368395">0788368395</a></p>
 
-    <form id="contactForm">
-      <label for="name">Name (optional)</label>
-      <input type="text" id="name" name="name" placeholder="Your name" />
+  <hr>
 
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required />
-
-      <label for="message">Message *</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-
-    <div class="thank-you-message" id="thankYouMessage">
-      Thank you for contacting! We will get back to you soon.
-    </div>
-  </div>
-
-  <script>
-    const form = document.getElementById('contactForm');
-    const thankYou = document.getElementById('thankYouMessage');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Simple front-end validation could be added here if needed
-
-      // Normally here you'd send form data to your server/backend
-      // For demo, just show thank you message and clear form
-      form.style.display = 'none';
-      thankYou.style.display = 'block';
-    });
-  </script>
+  <h2>Or send a quick message below:</h2>
+  <form action="https://formspree.io/f/mnqedpzy" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><br><br>
+    <input type="email" name="email" placeholder="Your Email" required><br><br>
+    <textarea name="message" placeholder="What do you want to update?" rows="5" cols="30" required></textarea><br><br>
+    <button type="submit">Send</button>
+  </form>
 </body>
 </html>
