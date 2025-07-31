@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Admin Login</h1>
+  <input type="password" id="passwordInput" placeholder="Enter Admin Password"><br><br>
+  <button onclick="checkPassword()">Login</button>
+  <p id="message" style="color:red;"></p>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("passwordInput").value;
+      const correctPassword = "boris123"; // ✅ Change this to your secret password
+
+      if (password === correctPassword) {
+        window.location.href = "admin.html";
+      } else {
+        document.getElementById("message").innerText = "Incorrect password. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
