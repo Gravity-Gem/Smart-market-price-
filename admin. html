@@ -1,0 +1,12 @@
+<!-- Just a reminder that access should come from login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Admin Control Panel</h1>
+  <p>Only admins should be here!</p>
+</body>
+</html>
