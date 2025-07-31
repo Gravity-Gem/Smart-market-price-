@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seller Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Seller Registration</h1>
+  <form>
+    <input type="text" placeholder="Your Name"><br><br>
+    <input type="text" placeholder="Product"><br><br>
+    <input type="text" placeholder="Price"><br><br>
+    <input type="text" placeholder="Market"><br><br>
+    <input type="text" placeholder="Available Time"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
