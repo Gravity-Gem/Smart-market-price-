@@ -1,4 +1,3 @@
-<!-- Just a reminder that access should come from login.html -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +6,46 @@
 </head>
 <body>
   <h1>Admin Control Panel</h1>
-  <p>Only admins should be here!</p>
+  <p>Only admins should be here. You can view and delete seller data below.</p>
+
+  <h2>Registered Sellers</h2>
+  <table border="1" id="adminTable">
+    <tr>
+      <th>Seller</th>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Market</th>
+      <th>Time</th>
+      <th>Delete</th>
+    </tr>
+  </table>
+
+  <script>
+    function loadSellers() {
+      const sellers = JSON.parse(localStorage.getItem('sellers')) || [];
+      const table = document.getElementById("adminTable");
+
+      sellers.forEach((s, index) => {
+        const row = table.insertRow();
+        row.innerHTML = `
+          <td>${s.name}</td>
+          <td>${s.product}</td>
+          <td>${s.price}</td>
+          <td>${s.market}</td>
+          <td>${s.time}</td>
+          <td><button onclick="deleteSeller(${index})">Delete</button></td>
+        `;
+      });
+    }
+
+    function deleteSeller(index) {
+      let sellers = JSON.parse(localStorage.getItem('sellers')) || [];
+      sellers.splice(index, 1);
+      localStorage.setItem('sellers', JSON.stringify(sellers));
+      location.reload(); // Reload to show updated table
+    }
+
+    loadSellers();
+  </script>
 </body>
 </html>
