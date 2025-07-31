@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Market View</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Available Sellers and Products</h1>
+  <table border="1" style="margin: auto;">
+    <tr>
+      <th>Seller</th>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Market</th>
+      <th>Available Time</th>
+    </tr>
+    <tr>
+      <td>Jean</td>
+      <td>Rice</td>
+      <td>$20</td>
+      <td>Nyabugogo</td>
+      <td>8am - 12pm</td>
+    </tr>
+    <!-- Add more rows here manually or later dynamically -->
+  </table>
+</body>
+</html>
